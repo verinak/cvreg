@@ -774,7 +774,7 @@ partialF<-function(X,Y,idx_vec,SSRT=NULL,MSEM=NULL){
   if(is.null(MSEM)){
     MSEM=calculateMSE(X,Y)
   }
-  dfregressor=(ncol(X))-(length(idx_vec)+1)
+  dfregressor=(ncol(X))-(length(idx_vec))
   F=((SSRT-SSRR)/dfregressor)/MSEM
   return(F)
 }
